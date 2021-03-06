@@ -1,0 +1,20 @@
+{
+    "Statement": [
+        {
+            "Action": [
+                "ram:CreateLoginProfile",
+                "ram:UpdateLoginProfile"
+            ],
+            "Resource": [
+                "*"
+            ],
+            "Effect": "Deny",
+            "Condition": {
+                "StringNotLike": {
+                    "acs:PrincipalARN": "acs:ram:*:*:role/resourcedirectoryaccountaccessrole"
+                }
+            }
+        }
+    ],
+    "Version": "1"
+}

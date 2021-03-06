@@ -1,0 +1,15 @@
+{
+    "Statement": [
+      {
+        "Action": "ecs:DeleteInstance",
+        "Effect": "Deny",
+        "Resource": "*",
+        "Condition": {
+          "Bool": {
+            "acs:MFAPresent": "false"
+          }
+        }
+      }
+    ],
+    "Version": "1"
+  }

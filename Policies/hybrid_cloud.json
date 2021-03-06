@@ -1,0 +1,22 @@
+{
+    "Statement": [
+       {
+            "Action": [
+                "vpc:*PhysicalConnection*",
+                "vpc:*VirtualBorderRouter*",
+                "cen:*",
+                "vpc:*VpnGateway*",
+                "vpc:*VpnConnection*",
+                "vpc:*CustomerGateway*",
+                "vpc:*SslVpnServer*",
+                "vpc:*SslVpnClientCert*",
+                "vpc:*VpnRoute*",
+                "vpc:*VpnPbrRoute*",
+                "smartag:*"
+            ],
+            "Resource": "*",
+            "Effect": "Deny"         
+        }
+    ],
+    "Version": "1"
+}

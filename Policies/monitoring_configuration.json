@@ -1,0 +1,34 @@
+{
+    "Version": "1",
+    "Statement": [
+        {
+            "Action": [
+                "cms:Put*",
+                "cms:Update*",
+                "cms:Create*",
+                "cms:Modify*",
+                "cms:Disable*",
+                "cms:Enable*",
+                "cms:Delete*",
+                "cms:Send*",
+                "cms:Subscribe*",
+                "cms:Unsubscribe*",
+                "cms:Remove*",
+                "cms:CreateAction",
+                "cms:Pause*",
+                "cms:Stop*",
+                "cms:Start*",
+                "cms:BatchCreate*",
+                "cms:ProfileSet",
+                "cms:ApplyMonitoringTemplate"
+            ],
+            "Resource": "*",
+            "Effect": "Deny",
+            "Condition": {
+                "StringNotLike": {
+                    "acs:PrincipalARN": "acs:ram:*:*:role/resourcedirectoryaccountaccessrole"
+                }
+            }
+        }
+    ]
+}

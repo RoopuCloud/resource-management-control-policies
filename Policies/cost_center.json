@@ -1,0 +1,20 @@
+{
+    "Statement": [
+       {
+            "Action": [
+                "bss:DescribeOrderList",
+                "bss:DescribeOrderDetail",
+                "bss:PayOrder",
+                "bss:CancelOrder"
+            ],
+            "Resource": "*",
+            "Effect": "Deny",
+            "Condition": {
+                "StringNotLike": {
+                    "acs:PrincipalARN": "acs:ram:*:*:role/resourcedirectoryaccountaccessrole"
+                }
+            }
+        }
+    ],
+    "Version": "1"
+}

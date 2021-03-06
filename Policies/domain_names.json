@@ -1,0 +1,12 @@
+{
+    "Version": "1",
+    "Statement": [
+        {
+            "Action": [
+                "domain:CreateOrderActivate"
+            ],
+            "Resource": "*",
+            "Effect": "Deny"
+        }
+    ]
+}

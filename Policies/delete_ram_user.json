@@ -1,0 +1,33 @@
+{
+    "Version": "1",
+    "Statement": [
+        {
+            "Action": [
+                "ram:AttachPolicyToUser",
+                "ram:DetachPolicyFromUser",
+                "ram:AddUserToGroup",
+                "ram:RemoveUserFromGroup",
+                "ram:UpdateUser",
+                "ram:DeleteUser",             
+                "ram:CreateLoginProfile",
+                "ram:UpdateLoginProfile",
+                "ram:DeleteLoginProfile",              
+                "ram:CreateAccessKey",
+                "ram:DeleteAccessKey",
+                "ram:UpdateAccessKey",
+                "ram:BindMFADevice",
+                "ram:UnbindMFADevice",
+                "ram:DisableVirtualMFA"
+            ],
+            "Resource": [
+                "acs:ram:*:*:user/Alice"
+            ],
+            "Effect": "Deny",
+            "Condition": {
+                "StringNotLike": {
+                    "acs:PrincipalARN": "acs:ram:*:*:role/resourcedirectoryaccountaccessrole"
+                }
+            }
+        }
+    ]
+}

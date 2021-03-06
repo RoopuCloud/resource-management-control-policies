@@ -1,0 +1,42 @@
+{
+    "Statement": [
+        {
+            "Action": [
+                "vpc:*HaVip*",
+                "vpc:*RouteTable*",
+                "vpc:*VRouter*",
+                "vpc:*RouteEntry*",
+                "vpc:*VSwitch*",
+                "vpc:*Vpc*",
+                "vpc:*Cen*",           
+                "vpc:*NetworkAcl*"
+            ],
+            "Resource": "*",
+            "Effect": "Deny",
+            "Condition": {
+                "StringNotLike": {
+                    "acs:PrincipalARN": "acs:ram:*:*:role/resourcedirectoryaccountaccessrole"
+                }
+            }
+        },
+        {
+            "Action": [
+                "vpc:*VpnGateway*",
+                "vpc:*VpnConnection*",
+                "vpc:*CustomerGateway*",
+                "vpc:*SslVpnServer*",
+                "vpc:*SslVpnClientCert*",
+                "vpc:*VpnRoute*",
+                "vpc:*VpnPbrRoute*"
+            ],
+            "Resource": "*",
+            "Effect": "Deny",
+            "Condition": {
+                "StringNotLike": {
+                    "acs:PrincipalARN": "acs:ram:*:*:role/resourcedirectoryaccountaccessrole"
+                }
+            }
+        }
+    ],
+    "Version": "1"
+}

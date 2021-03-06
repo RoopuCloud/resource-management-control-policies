@@ -1,0 +1,21 @@
+{
+    "Statement": [
+        {
+            "Action": [
+                "actiontrail:UpdateTrail",
+                "actiontrail:DeleteTrail",
+                "actiontrail:StopLogging"
+            ],
+            "Resource": [
+                "*"
+            ],
+            "Effect": "Deny",
+            "Condition": {
+                "StringNotLike": {
+                    "acs:PrincipalARN": "acs:ram:*:*:role/resourcedirectoryaccountaccessrole"
+                }
+            }
+        }
+    ],
+    "Version": "1"
+}

@@ -1,0 +1,21 @@
+{
+    "Statement": [
+        {
+            "Action": [
+                "ram:CreateSAMLProvider",
+                "ram:DeleteSAMLProvider",
+                "ram:UpdateSAMLProvider"
+            ],
+            "Resource": [
+                "*"
+            ],
+            "Effect": "Deny",
+            "Condition": {
+                "StringNotLike": {
+                    "acs:PrincipalARN": "acs:ram:*:*:role/resourcedirectoryaccountaccessrole"
+                }
+            }
+        }
+    ],
+    "Version": "1"
+}

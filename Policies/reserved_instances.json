@@ -1,0 +1,12 @@
+{
+    "Version": "1",
+    "Statement": [
+        {
+            "Action": [
+                "ecs:PurchaseReservedInstancesOffering"
+            ],
+            "Resource": "*",
+            "Effect": "Deny"
+        }
+    ]
+}

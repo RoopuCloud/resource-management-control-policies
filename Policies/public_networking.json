@@ -1,0 +1,22 @@
+{
+    "Version": "1",
+    "Statement": [
+        {
+            "Action": [
+                "vpc:AllocateEipAddress",
+                "vpc:AllocateEipAddressPro",
+                "vpc:AllocateEipSegmentAddress",
+                "vpc:CreateNatGateway",
+            ],
+            "Resource": [
+                "*"
+            ],
+            "Effect": "Deny",
+            "Condition": {
+                "StringNotLike": {
+                    "acs:PrincipalARN": "acs:ram:*:*:role/resourcedirectoryaccountaccessrole"
+                }
+            }
+        }
+    ]
+}

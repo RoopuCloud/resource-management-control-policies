@@ -1,0 +1,39 @@
+{
+    "Statement": [
+        {
+            "Action": [
+                "ram:Attach*",
+                "ram:Detach*",
+                "ram:BindMFADevice",
+                "ram:CreateAccessKey",
+                "ram:CreateLoginProfile",
+                "ram:CreatePolicyVersion",
+                "ram:DeleteAccessKey",
+                "ram:DeleteGroup",
+                "ram:DeleteLoginProfile",
+                "ram:DeletePolicy",
+                "ram:DeletePolicyVersion",
+                "ram:DeleteRole",
+                "ram:DeleteUser",
+                "ram:DisableVirtualMFA",
+                "ram:AddUserToGroup",
+                "ram:RemoveUserFromGroup",
+                "ram:SetDefaultPolicyVersion",
+                "ram:UnbindMFADevice",
+                "ram:UpdateAccessKey",
+                "ram:UpdateGroup",
+                "ram:UpdateLoginProfile",
+                "ram:UpdateRole",
+                "ram:UpdateUser"
+            ],
+            "Resource": "*",
+            "Effect": "Deny",         
+            "Condition": {
+                "StringNotLike": {
+                    "acs:PrincipalARN":"acs:ram:*:*:role/resourcedirectoryaccountaccessrole"
+               }
+           }
+        }
+    ],
+    "Version": "1"
+}

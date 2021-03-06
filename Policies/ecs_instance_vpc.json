@@ -1,0 +1,18 @@
+{
+    "Version": "1",
+    "Statement": [
+        {
+            "Action": [
+                "ecs:CreateInstance",
+                "ecs:RunInstances"
+            ],
+            "Resource": "*",
+            "Effect": "Deny",
+            "Condition": {
+                "StringNotLike": {
+                    "vpc:VPC": "acs:vpc:cn-shenzhen:*:vpc/vpc-wz95ya85js0avrkabc****"
+                }
+            }
+        }
+    ]
+}

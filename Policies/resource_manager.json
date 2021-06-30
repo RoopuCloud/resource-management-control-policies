@@ -1,12 +1,11 @@
 {
-    "Version": "1",
     "Statement": [
         {
             "Action": [
-                "vpc:AllocateEipAddress",
-                "vpc:AllocateEipAddressPro",
-                "vpc:AllocateEipSegmentAddress",
-                "vpc:CreateNatGateway"
+                "resourcemanager:DestroyResourceDirectory",
+                "resourcemanager:RemoveCloudAccount",
+                "resourcemanager:DisableControlPolicy",
+                "resourcemanager:DeregisterDelegatedAdministrator"
             ],
             "Resource": [
                 "*"
@@ -18,5 +17,6 @@
                 }
             }
         }
-    ]
+    ],
+    "Version": "1"
 }

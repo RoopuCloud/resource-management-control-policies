@@ -21,6 +21,13 @@ In this repository you will find Alibaba Cloud Resource Management Control Polic
 * Purchase of domain names is prohibited --> [domain_names.json](Policies/domain_names.json)
 * Access to the cloud marketplace is forbidden --> [cloud_marketplace.json](Policies/cloud_marketplace.json)
 * Prevent access to the ticket system --> [ticket_system.json](Policies/ticket_system.json)
+* It is forbidden to delete or add config rules --> [cloudconfig.json](Policies/cloudconfig.json)
+* It is forbidden to delete or modify the trails --> [actiontrail.json](Policies/actiontrail.json)
+* It is forbidden to delete, disable or deregister the resource directory and the member accounts --> [resource_manager.json](Policies/resource_manager.json)
+* It is forbidden to delete the RDS instance --> [rds.json](Policies/rds.json)
+* It is forbidden to delete the KMS keys --> [kms.json](Policies/kms.json)
+* It is forbidden to delete or update the ElasticSearch cluster --> [elasticsearch.json](Policies/elasticsearch.json)
+* Forbid many acctions in ECS such as deleting instances, disks, key pairs, security groups, images, snapshots and network interfaces --> [resource_manager.json](Policies/resource_manager.json)
 
 ## Contact
 You can contact us [here](https://roopu.cloud/contact).

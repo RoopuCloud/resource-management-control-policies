@@ -1,12 +1,8 @@
 {
-    "Version": "1",
     "Statement": [
         {
             "Action": [
-                "vpc:AllocateEipAddress",
-                "vpc:AllocateEipAddressPro",
-                "vpc:AllocateEipSegmentAddress",
-                "vpc:CreateNatGateway"
+                "kms:ScheduleKeyDeletion"
             ],
             "Resource": [
                 "*"
@@ -18,5 +14,6 @@
                 }
             }
         }
-    ]
+    ],
+    "Version": "1"
 }

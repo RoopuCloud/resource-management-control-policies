@@ -1,12 +1,10 @@
 {
-    "Version": "1",
     "Statement": [
         {
             "Action": [
-                "vpc:AllocateEipAddress",
-                "vpc:AllocateEipAddressPro",
-                "vpc:AllocateEipSegmentAddress",
-                "vpc:CreateNatGateway"
+                "config:DeleteConfigRules",
+                "config:PutConfigurationRecorder",
+                "config:PutDeliveryChannel"
             ],
             "Resource": [
                 "*"
@@ -18,5 +16,6 @@
                 }
             }
         }
-    ]
+    ],
+    "Version": "1"
 }

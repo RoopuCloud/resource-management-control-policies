@@ -1,0 +1,61 @@
+{
+    "Statement": [
+        {
+            "Action": [
+                "ecs:DeleteInstance",
+                "ecs:DeleteInstances",
+                "ecs:DeleteDisk",
+                "ecs:DeleteImage",
+                "ecs:DeleteSnapshot",
+                "ecs:DeleteSecurityGroup",
+                "ecs:DeleteKeyPairs",
+                "ecs:DeleteNetworkInterface"
+            ],
+            "Resource": "*",
+            "Effect": "Deny",
+            "Condition": {
+                "StringNotLike": {
+                    "acs:PrincipalARN": "acs:ram:*:*:role/resourcedirectoryaccountaccessrole"
+                }
+            }
+        },
+        {
+            "Action": [
+                "ecs:RunInstances"
+            ],
+            "Resource": "*",
+            "Effect": "Deny",
+            "Condition": {
+                "StringNotLike": {
+                    "ecs:RegionId": "cn-hangzhou"
+                }
+            }
+        },
+        {
+            "Action": [
+                "ecs:RunInstances"
+            ],
+            "Resource": "*",
+            "Effect": "Deny",
+            "Condition": {
+                "StringNotLike": {
+                    "ecs:InstanceType": "g6"
+                }
+            }
+        },
+        {
+            "Action": [
+                "ecs:CreateInstance",
+                "ecs:RunInstances"
+            ],
+            "Resource": "*",
+            "Effect": "Deny",
+            "Condition": {
+                "StringNotLike": {
+                    "vpc:VPC": "acs:vpc:cn-shenzhen:*:vpc/vpc-wz95ya85js0avrkabc****"
+                }
+            }
+        }
+    ],
+    "Version": "1"
+}
